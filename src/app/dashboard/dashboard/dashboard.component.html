@@ -1,0 +1,165 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="px-2 mt-3">
+      <button mat-raised-button class="basicButton me-2">MY QUEUE</button>
+      <button mat-raised-button class="basicButton">GLOBAL QUEUE</button>
+    </div>
+  </div>
+  <div class="row">
+    <span id="alterColor" class="col-12 col-md-3 col-sm-3 col-lg-3 p-2">
+      <div>
+        <div class="card borderBottom1" style="cursor: pointer; height: 14vh">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+                <span class="material-icons one"> warning_amber </span>
+              </div>
+              <div class="col-12 col-md-8 col-sm-8 col-lg-8">
+                <span class="row font ms-4"> 8 </span>
+                <span class="row font ms-4"> No Match </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+
+    <span id="alterColor" class="col-12 col-md-3 col-sm-3 col-lg-3 p-2">
+      <div>
+        <div class="card borderBottom2" style="cursor: pointer; height: 14vh">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+                <span class="material-icons two"> description </span>
+              </div>
+              <div class="col-12 col-md-8 col-sm-8 col-lg-8">
+                <span class="row font ms-4"> 0 </span>
+                <span class="row font ms-4"> Likely Match </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+
+    <span id="alterColor" class="col-12 col-md-3 col-sm-3 col-lg-3 p-2">
+      <div>
+        <div class="card borderBottom3" style="cursor: pointer; height: 14vh">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+                <span class="material-icons three"> autorenew </span>
+              </div>
+              <div class="col-12 col-md-8 col-sm-8 col-lg-8">
+                <span class="row font ms-4"> 0 </span>
+                <span class="row font ms-4">Clarification Awaited </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+
+    <span id="alterColor" class="col-12 col-md-3 col-sm-3 col-lg-3 p-2">
+      <div>
+        <div class="card borderBottom4" style="cursor: pointer; height: 14vh">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+                <span class="material-icons four"> play_circle_filled </span>
+              </div>
+              <div class="col-12 col-md-8 col-sm-8 col-lg-8">
+                <span class="row font ms-4"> 0 </span>
+                <span class="row font ms-4"> Clarification Received </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+
+  <div class="mt-5">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      id="grid"
+      matSort
+      class="mat-elevation-z8"
+    >
+      <ng-container matColumnDef="task">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Task</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.task }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="companyCode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Company Code</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.companyCode }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="bank">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Bank</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.bank }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="customerNo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Customer No</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.customerNo }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="customerName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader"> Customer Name</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.customerName }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="payamount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Payment Amount</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.payamount }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="currency">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Currency</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.currency }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span class="tableHeader">Status</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.status }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

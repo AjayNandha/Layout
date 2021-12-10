@@ -1,0 +1,94 @@
+.basicButton {
+  // margin-right: 1%;
+  background-color: lightgray;
+  color: white;
+  width: 10%;
+}
+.material-icons {
+  font-size: 60px;
+}
+.borderBottom1 {
+  border-bottom: 6px solid red !important;
+  height: 30vh;
+}
+.borderBottom2 {
+  border-bottom: 6px solid orange !important;
+  height: 30vh;
+}
+.borderBottom3 {
+  border-bottom: 6px solid black !important;
+  height: 30vh;
+}
+.borderBottom4 {
+  border-bottom: 6px solid lightskyblue !important;
+  height: 30vh;
+}
+.one {
+  color: red;
+}
+.two {
+  color: #d3d300;
+}
+.three {
+  color: lightskyblue;
+}
+.four {
+  color: red;
+}
+.font {
+  font-weight: 900;
+}
+#grid {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid lightgray;
+  font-weight: 500;
+}
+
+#grid td,
+#grid th {
+  border: 2px solid lightgray;
+  padding: 4px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+#grid tr:nth-child(even) {
+  background-color: #ecf6ff;
+}
+
+#grid tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+#grid tr:hover {
+  background-color: #ddd;
+}
+
+#grid th {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+  color: black;
+  font-weight: bolder;
+  font-size: 17px;
+  // background-color: dimgrey;
+  background-color: #fff2cc;
+}
+.tableHeader {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+tr.mat-header-row {
+  height: 45px !important;
+}
+
+#grid .mat-form-field-wrapper {
+  padding-bottom: 0.1em !important;
+}
+
+#grid .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 1.2375em 0 !important;
+}
